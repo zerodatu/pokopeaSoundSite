@@ -1,0 +1,36 @@
+.titleName {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.searchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#searchBox,
+#startDate,
+#endDate {
+  padding: 5px;
+  font-size: 1em;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5列のグリッド */
+  grid-gap: 10px; /* グリッドアイテム間のスペース */
+  margin-top: 20px;
+}
+
+.gridItem {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}

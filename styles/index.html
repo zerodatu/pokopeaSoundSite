@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ぽこピーサウンドまとめサイト(非公式ファンサイト)</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="titleName">
+            <h1>ぽこピーサウンドまとめサイト(非公式ファンサイト)</h1>
+        </div>
+        <div class="explanation">
+            <pre>
+                本サイトは非公式のぽこピーファンサイトの一種となります。
+                様々な名言をサウンドで再生します。
+                あくまでぽこピーファンとして楽しむためですので、本家にご迷惑をおかけするようなことがあれば、
+                すぐに本サービスを停止いたします。
+                くれぐれも荒らし等はおやめください。
+            </pre>
+        </div>
+    </header>
+    <div class="searchItem">
+        <p>動画名・名言検索</p>
+        <input type="text" id="searchBox" name="search" placeholder="ぬっはー">
+        <p>期間検索</p>
+        <label for="startDate">開始日</label>
+        <select name="startDate" id="startDate">
+            <option value="2018-02-02">2018-02-02</option>
+            <option value="2018-06-01">2018-06-01</option>
+            <option value="2018-12-01">2018-12-01</option>
+            <option value="2019-06-01">2019-06-01</option>
+            <option value="2019-12-01">2019-12-01</option>
+            <option value="2020-06-01">2020-06-01</option>
+            <option value="2020-12-01">2020-12-01</option>
+            <option value="2021-06-01">2021-06-01</option>
+            <option value="2021-12-01">2021-12-01</option>
+            <option value="2022-06-01">2022-06-01</option>
+            <option value="2022-12-01">2022-12-01</option>
+            <option value="2023-06-01">2023-06-01</option>
+            <option value="2023-12-01">2023-12-01</option>
+            <option value="2024-06-01">2024-06-01</option>
+        </select>
+        <label for="endDate">終了日</label>
+        <select name="endDate" id="endDate">
+            <option value="2024-12-31">2024-12-31</option>
+            <option value="2024-06-01">2024-06-01</option>
+            <option value="2023-12-01">2023-12-01</option>
+            <option value="2023-06-01">2023-06-01</option>
+            <option value="2022-12-01">2022-12-01</option>
+            <option value="2022-06-01">2022-06-01</option>
+            <option value="2021-12-01">2021-12-01</option>
+            <option value="2021-06-01">2021-06-01</option>
+            <option value="2020-12-01">2020-12-01</option>
+            <option value="2020-06-01">2020-06-01</option>
+            <option value="2019-12-01">2019-12-01</option>
+            <option value="2019-06-01">2019-06-01</option>
+            <option value="2018-12-01">2018-12-01</option>
+            <option value="2018-06-01">2018-06-01</option>
+        </select>
+    </div>
+    <div class="gridContainer" id="gridContainer">
+        <!-- JavaScriptでここに5x5の箱を動的に追加します -->
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
