@@ -34,9 +34,13 @@ const quotes = [
 const gridContainer = document.getElementById('gridContainer');
 const prevPageBtn = document.getElementById('prevPage');
 const nextPageBtn = document.getElementById('nextPage');
+const pageInfo = document.getElementById('pageInfo');
+const pageNumberInput = document.getElementById('pageNumber');
+const goPageBtn = document.getElementById('goPage');
 
 let currentPage = 1;
 const itemsPerPage = 25;
+const totalPages = Math.ceil(quotes.length / itemsPerPage);
 
 function displayQuotes(page) {
     // まず、現在のコンテンツをクリア
@@ -58,9 +62,12 @@ function displayQuotes(page) {
         gridContainer.appendChild(gridItem);
     }
 
+    // ページ情報の更新
+    pageInfo.textContent = `ページ ${page} / ${totalPages}`;
+
     // ページングボタンの状態を更新
     prevPageBtn.disabled = page === 1;
-    nextPageBtn.disabled = endIndex >= quotes.length;
+    nextPageBtn.disabled = page === totalPages;
 }
 
 prevPageBtn.addEventListener('click', () => {
@@ -71,9 +78,19 @@ prevPageBtn.addEventListener('click', () => {
 });
 
 nextPageBtn.addEventListener('click', () => {
-    if ((currentPage * itemsPerPage) < quotes.length) {
+    if (currentPage < totalPages) {
         currentPage++;
         displayQuotes(currentPage);
+    }
+});
+
+goPageBtn.addEventListener('click', () => {
+    const pageNumber = parseInt(pageNumberInput.value);
+    if (pageNumber >= 1 && pageNumber <= totalPages) {
+        currentPage = pageNumber;
+        displayQuotes(currentPage);
+    } else {
+        alert(`ページ番号は1から${totalPages}の間で入力してください`);
     }
 });
 
